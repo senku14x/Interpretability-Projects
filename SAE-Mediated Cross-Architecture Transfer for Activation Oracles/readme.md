@@ -51,7 +51,7 @@ More specifically:
 - the target-side Gemma SAE decode step was not the core issue
 - and the raw baseline, while strong, was mostly task-specific rather than broadly general
 
-So this repo is basically a **careful negative result**.  
+So this repo is basically a **negative result**.  
 It doesn’t show that SAEs can never help with cross-architecture transfer. It just shows that the simple version of that story — “take public SAEs from both models, align them linearly, and decode” — did **not** work here.
 
 
