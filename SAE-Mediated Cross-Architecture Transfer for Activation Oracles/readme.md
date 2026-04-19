@@ -39,7 +39,7 @@ Results:
   - zero steering: **0.524**
   - shuffled steering: **0.499**
 
-So the within-architecture SAE tax was only about **1–3%**. That means the Gemma SAE itself was *not* the main problem. :contentReference[oaicite:2]{index=2}
+So the within-architecture SAE tax was only about **1–3%**. That means the Gemma SAE itself was *not* the main problem. 
 
 ### The raw hidden-state baseline worked well
 
@@ -65,7 +65,7 @@ Results:
   - shuffled-pair control: **0.476**
   - random control: **0.475**
 
-So the raw aligned map was clearly real. It beat both shuffled and random controls by a large margin. :contentReference[oaicite:3]{index=3}
+So the raw aligned map was clearly real. It beat both shuffled and random controls by a large margin. 
 
 ### The full SAE-mediated path lost badly
 
@@ -91,7 +91,7 @@ I also tried wider SAEs:
 
 So none of those came close to the raw baseline:
 - raw was **0.804 / 0.697**
-- full SAE variants stayed around **0.55–0.59** :contentReference[oaicite:4]{index=4}
+- full SAE variants stayed around **0.55–0.59**
 
 ### The most useful finding: the problem was mostly on the source side
 
@@ -130,7 +130,7 @@ For the full 16k SAE path:
 - native Gemma 16k SAE L0 was around **192**
 - projected features also had about **16–22% negative entries**
 
-So I was basically decoding dense, signed vectors through a decoder that was trained on sparse nonnegative JumpReLU-style features. I tried fixing this with ReLU + TopK before decode, and it helped a bit, but not nearly enough to match raw hidden-state transfer. :contentReference[oaicite:6]{index=6}
+So I was basically decoding dense, signed vectors through a decoder that was trained on sparse nonnegative JumpReLU-style features. I tried fixing this with ReLU + TopK before decode, and it helped a bit, but not nearly enough to match raw hidden-state transfer.
 
 ### The 32x Llama SAE didn’t rescue it
 
@@ -142,7 +142,7 @@ But it still had native L0 only around **39**, compared to about **35** for the 
   - SST-2: **0.592**
   - AG News: **0.563**
 
-So “just use a wider public source SAE” was not enough. :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}
+So “just use a wider public source SAE” was not enough. 
 
 ### The raw baseline did not generalize across tasks
 
@@ -158,7 +158,7 @@ If I trained the raw projection on one task and tested on the other:
   - aligned: **0.587**
   - shuffled: **0.547**
 
-So the raw baseline was strong **within task**, but not really task-general. It looked more like a strong task-specific alignment than a universal cross-architecture translator. :contentReference[oaicite:9]{index=9} :contentReference[oaicite:10]{index=10}
+So the raw baseline was strong **within task**, but not really task-general. It looked more like a strong task-specific alignment than a universal cross-architecture translator.
 
 ### Other things that didn’t work
 
@@ -195,4 +195,4 @@ It does **not** show that:
 
 It only shows that the simple story —
 **“take public SAEs from both models, linearly align them, decode, and query the oracle”**
-— did **not** work here. :contentReference[oaicite:11]{index=11}
+— did **not** work here.
