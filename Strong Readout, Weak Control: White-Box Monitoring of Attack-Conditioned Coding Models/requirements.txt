@@ -1,0 +1,16 @@
+# Model loading
+transformer-lens>=2.0
+transformers>=4.40
+torch>=2.1
+
+# Dataset generation
+vllm>=0.4
+datasets
+
+# Analysis
+numpy
+scikit-learn
+matplotlib
+
+# Behavioral monitor
+google-genai
