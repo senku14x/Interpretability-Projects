@@ -28,7 +28,7 @@ This README should be read as a snapshot of an active research project rather th
 |---|---|
 | Source model | DeepSeek-R1-Distill-Qwen-14B (48 layers, hidden dim 5120) |
 | Transfer model | Qwen-2.5-14B-Instruct (same Qwen-14B family, non-R1-distilled) |
-| Main task set | 300 game-theoretic reasoning tasks |
+| Main task set | 300 tasks total = 250 game-theoretic / strategic reasoning tasks + 50 non-strategic control tasks. |
 | OOD tasks | 50 held-out strategic tasks |
 | Intervention layer | 24 |
 | Vector type | difference-of-means (with-vs-without centering) |
