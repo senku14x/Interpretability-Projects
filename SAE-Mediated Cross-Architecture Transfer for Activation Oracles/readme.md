@@ -4,7 +4,7 @@ Disclaimer: This project was done with me just being stubborn and ignoring the o
 
 This repo is a mini research project on **cross-architecture transfer for Activation Oracles**.
 
-The questio was simple:
+The question was simple:
 
 > If a Gemma Activation Oracle is trained to read Gemma activations, can I make it read **Llama** activations better by routing them through **SAE feature spaces** instead of just doing a direct raw hidden-state projection?
 
