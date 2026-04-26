@@ -2,7 +2,7 @@
 
 Code and results for a mechanistic interpretability study of strategic reasoning in DeepSeek-R1-Distill-Qwen-14B. I extract difference-of-means steering vectors for strategic reasoning sub-behaviors from the model's residual stream, test their geometry and causal role, and check whether they transfer within the Qwen-14B model family.
 
-I built this after identifying weaknesses in an earlier mutually-exclusive annotation setup. I built the multi-label annotation, gold calibration, and controlled intervention pipeline after identifying weaknesses in an earlier mutually-exclusive annotation setup. All experiments were run on Google Colab (A100).
+I built the multi-label annotation, calibration by manually annotating and checking the definitions aligned or not, and controlled intervention pipeline after identifying weaknesses in an earlier mutually-exclusive annotation setup. All experiments were run on Google Colab (A100).
 
 ---
 
